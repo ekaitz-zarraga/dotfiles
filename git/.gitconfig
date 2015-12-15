@@ -1,0 +1,11 @@
+[user]
+	email = ekaitz.zarraga@gmail.com
+	name = Ekaitz Zárraga
+[core]
+	editor = vim
+[color]
+	ui = auto
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
