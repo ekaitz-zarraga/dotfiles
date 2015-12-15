@@ -1,2 +1,2 @@
-# dotfiles
-My dotfiles. Vim and Git for now.
+# Configuration files
+My dotfiles. Vim, Git and Bash for now.
