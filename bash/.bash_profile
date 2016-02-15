@@ -6,3 +6,7 @@ PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\
 if [ -f .bash_aliases ] ; then
 	. .bash_aliases
 fi
+
+if [ -f .bashrc ]; then
+	. .bashrc
+fi
