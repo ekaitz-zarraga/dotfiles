@@ -6,3 +6,9 @@ PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\
 if [ -f ~/.bash_aliases ] ; then
 	. ~/.bash_aliases
 fi
+
+
+# Extra configuration for work or home, just separate it in different file to keep dotfiles clean
+if [ -f ~/.bash_extra ] ; then
+	. ~/.bash_extra
+fi
