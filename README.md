@@ -1,5 +1,5 @@
 # Configuration files
-My dotfiles. Vim, Git and Bash for now.
+My dotfiles. Vim, Git, Tmux and Bash for now.
 
 Use stow to install them:
 
