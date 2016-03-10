@@ -7,6 +7,7 @@ setlocal spell
 " Textwidth for automatic wrap `gq` is formatting operation
 setlocal textwidth=79
 setlocal formatoptions+=t
+setlocal formatoptions-=l
 
 
 " Highlight where the lines are more than 80 characters wide
