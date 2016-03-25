@@ -21,4 +21,5 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-
+# vim open multiple files in tabs
+alias vim='vim -p'
