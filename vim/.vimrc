@@ -23,7 +23,7 @@ autocmd BufNewFile,BufRead *.md set ft=markdown
 
 " Get 256 colors
 if $TERM == "xterm-256color"
-  set t_Co=256
+	set t_Co=256
 endif
 
 " Ingnore Case in search
