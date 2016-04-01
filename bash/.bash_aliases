@@ -5,7 +5,7 @@ alias nvimdiff='nvim -d'
 alias r='ssh -l root'
 
 # fuck!
-alias fuck='sudo $(history -p \!\!)'
+alias fuck='COMMAND=$(history -p \!\!); echo sudo $COMMAND; sudo $COMMAND'
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
