@@ -24,11 +24,11 @@ set foldlevelstart=99
 set hlsearch
 nnoremap <CR> :noh<CR><CR>
 
-" Understand .md as markdown
-autocmd BufNewFile,BufRead *.md set ft=markdown
-
 " Ingnore Case in search
 set ignorecase
 
 " Always show tabline (0=never, 1=when there are at least 2 tabs, 2=always)
 set showtabline=2
+
+" Mouse support
+set mouse=a
