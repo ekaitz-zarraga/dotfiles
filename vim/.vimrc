@@ -1,3 +1,24 @@
+
+" Vundle stuff ----------------------------------------------
+set nocompatible
+filetype plugin off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Post to Wordpress using MarkDown
+Plugin 'ekaitz-zarraga/droWMark'
+
+" Add plugins here
+
+call vundle#end()            " required
+" / Vundle stuff end ----------------------------------------
+
+
+
+
 " Different config for each filetype
 filetype plugin on
 
