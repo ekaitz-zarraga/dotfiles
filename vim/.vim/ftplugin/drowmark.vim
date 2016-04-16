@@ -15,7 +15,7 @@ highlight ColorColumn ctermbg=LightGreen
 " Auto-capitalize script
 augroup SENTENCES
 	au!
-	autocmd InsertCharPre * if &ft=='markdown' | if search('\v(%^|[.!?]\_s+|\_^\-\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif | endif
+	autocmd InsertCharPre * if &ft=='drowmark' | if search('\v(%^|[.!?]\_s+|\_^\-\s|\_^title\:\s|\n\n)%#', 'bcnw') != 0 | let v:char = toupper(v:char) | endif | endif
 augroup END
 
 " Highlight spelling errors in red and underline
