@@ -11,14 +11,19 @@ Plugin 'VundleVim/Vundle.vim'
 " Post to Wordpress using MarkDown
 Plugin 'ekaitz-zarraga/droWMark'
 
+" Navigate in directory tree
+Plugin 'scrooloose/nerdtree'
+
 " Add plugins here
 
 call vundle#end()            " required
 " / Vundle stuff end ----------------------------------------
 
+" Allow backspace always
+set backspace=indent,eol,start
+
 " Activate syntax highlighting by default
 syntax on
-
 
 " Different config for each filetype
 filetype plugin on
@@ -46,8 +51,9 @@ set foldlevelstart=99
 set hlsearch
 nnoremap <CR> :noh<CR><CR>
 
-" Ingnore Case in search
+" Ignore Case in search
 set ignorecase
+set smartcase
 
 " Always show tabline (0=never, 1=when there are at least 2 tabs, 2=always)
 set showtabline=2
