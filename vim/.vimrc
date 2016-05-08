@@ -16,7 +16,8 @@ Plugin 'ekaitz-zarraga/droWMark'
 call vundle#end()            " required
 " / Vundle stuff end ----------------------------------------
 
-
+" Activate syntax highlighting by default
+syntax on
 
 
 " Different config for each filetype
