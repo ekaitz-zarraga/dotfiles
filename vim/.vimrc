@@ -60,3 +60,6 @@ set showtabline=2
 
 " Mouse support
 set mouse=a
+
+" Set default colorscheme but dark comments -> Torte
+colorscheme torte
