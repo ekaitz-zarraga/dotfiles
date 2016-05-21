@@ -5,7 +5,7 @@ Use `install.sh` to install the dotfiles. It uses `stow` internally.
 
 ```shell
 ... $ git clone [THIS REPO]
-.../dotfiles $ cd dotfiles
+... $ cd dotfiles
 .../dotfiles $ sh install.sh
 ```
 
