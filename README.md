@@ -1,11 +1,12 @@
 # Configuration files
-My dotfiles. Vim, Git, Tmux and Bash for now.
+My dotfiles. Vim, NeoVim, Git, Tmux and Bash for now.
 
-Use stow to install them:
+Use `install.sh` to install the dotfiles. It uses `stow` internally.
 
-``` Bash
-cd dotfiles
-stow vim|bash|git|tmux -t ~
+```shell
+... $ git clone [THIS REPO]
+.../dotfiles $ cd dotfiles
+.../dotfiles $ sh install.sh
 ```
 
 > Stow makes links to the files in the target directory.
