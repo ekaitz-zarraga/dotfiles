@@ -11,9 +11,6 @@ Plugin 'VundleVim/Vundle.vim'
 " Post to Wordpress using MarkDown
 Plugin 'ekaitz-zarraga/droWMark'
 
-" Navigate in directory tree
-Plugin 'scrooloose/nerdtree'
-
 " Add plugins here
 
 call vundle#end()            " required
