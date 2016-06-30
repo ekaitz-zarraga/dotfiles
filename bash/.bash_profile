@@ -18,5 +18,5 @@ export TERM=xterm-256color
 ################################################################
 # Create .config if it doesn't exist and set XDG vars
 mkdir -p $HOME/.config
-XDG_CONFIG_HOME=${XDG_CONFIG_HOME:=$HOME/.config}
-XDG_DATA_HOME=${XDG_DATA_HOME:=$HOME/.config}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:=$HOME/.config}
+export XDG_DATA_HOME=${XDG_DATA_HOME:=$HOME/.config}
