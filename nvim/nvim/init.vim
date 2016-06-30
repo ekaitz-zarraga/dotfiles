@@ -1,8 +1,8 @@
 " Vundle stuff ----------------------------------------------
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=$XDG_CONFIG_HOME/nvim/bundle/Vundle.vim
+call vundle#begin($XDG_CONFIG_HOME . '/nvim/bundle/')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -25,12 +25,7 @@ syntax on
 filetype plugin on
 
 " Show trailing spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+set list lcs=trail:·,tab:»·
 
 " Clear trailing spaces on <F2>
 function TrimWhiteSpace()
