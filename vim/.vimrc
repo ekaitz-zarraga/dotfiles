@@ -55,10 +55,14 @@ set ignorecase
 set smartcase
 
 " Always show tabline (0=never, 1=when there are at least 2 tabs, 2=always)
-set showtabline=2
+set showtabline=1
 
 " Mouse support
 set mouse=a
 
 " Set default colorscheme but dark comments -> Torte
 colorscheme torte
+
+" Default tabs
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4
+set autoindent
