@@ -1,1 +1,2 @@
-set syntax=c.doxygen
+setlocal foldmethod=syntax
+setlocal syntax=c.doxygen

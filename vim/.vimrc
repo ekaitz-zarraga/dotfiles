@@ -43,7 +43,7 @@ function TrimWhiteSpace()
 nnoremap <F2> :call TrimWhiteSpace()<CR>
 
 " Fold
-set foldmethod=syntax
+set foldmethod=indent
 set foldlevelstart=99
 
 " HighLight search and map CarrierReturn to remove highlight
