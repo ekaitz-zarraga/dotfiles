@@ -69,3 +69,6 @@ set autoindent
 
 " Change buffers without needing to save
 set hidden
+
+" Explore configured to show tree
+let g:netrw_liststyle= 3
