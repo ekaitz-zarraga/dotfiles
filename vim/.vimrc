@@ -66,3 +66,6 @@ colorscheme torte
 " Default tabs
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4
 set autoindent
+
+" Change buffers without needing to save
+set hidden
