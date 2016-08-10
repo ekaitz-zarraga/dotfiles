@@ -67,3 +67,6 @@ set hidden
 
 " Explore configured to show tree
 let g:netrw_liststyle= 3
+
+" Make terminal remap to go out of insert mode
+:tnoremap <Esc> <C-\><C-n>
