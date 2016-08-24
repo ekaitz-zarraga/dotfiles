@@ -11,3 +11,5 @@
 	tool = vimdiff
 [push]
 	default = simple
+[alias]
+	lg = log --graph --oneline --decorate --all
