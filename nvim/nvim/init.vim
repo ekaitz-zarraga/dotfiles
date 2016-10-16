@@ -10,6 +10,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Post to Wordpress using MarkDown
 Plugin 'ekaitz-zarraga/droWMark'
 
+" CoffeeScript stuff
+Plugin 'kchmck/vim-coffee-script'
+
 " Add plugins here
 
 call vundle#end()            " required
