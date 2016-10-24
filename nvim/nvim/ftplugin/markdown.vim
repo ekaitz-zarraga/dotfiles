@@ -4,12 +4,6 @@ setlocal syntax=markdown
 setlocal spelllang=en
 setlocal spell
 
-" Textwidth for automatic wrap `gq` is formatting operation
-setlocal textwidth=79
-setlocal formatoptions+=t
-setlocal formatoptions-=l
-
-
 " Auto-capitalize script
 augroup SENTENCES
     au!
