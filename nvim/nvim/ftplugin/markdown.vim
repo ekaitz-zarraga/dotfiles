@@ -10,10 +10,6 @@ setlocal formatoptions+=t
 setlocal formatoptions-=l
 
 
-" Highlight where the lines are more than 80 characters wide
-setlocal colorcolumn=80
-highlight ColorColumn ctermbg=DarkGrey
-
 " Auto-capitalize script
 augroup SENTENCES
     au!

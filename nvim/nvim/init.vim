@@ -73,3 +73,8 @@ let g:netrw_liststyle= 3
 
 " Make terminal remap to go out of insert mode
 :tnoremap <Esc> <C-\><C-n>
+
+" Highlight where the lines are more than 80 characters wide
+setlocal colorcolumn=80
+highlight ColorColumn ctermbg=DarkGrey
+
