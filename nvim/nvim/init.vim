@@ -26,6 +26,9 @@ syntax on
 
 " Enable TRUE COLORS
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+set termguicolors
+set background=dark
 
 " Set default colorscheme but dark comments -> Torte
 colorscheme torte
@@ -87,7 +90,7 @@ set formatoptions=tcqj
 
 " Highlight where the lines are more than 80 characters wide
 set colorcolumn=80
-highlight ColorColumn ctermbg=DarkGrey
+highlight ColorColumn ctermbg=DarkGrey guibg=#262626
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
