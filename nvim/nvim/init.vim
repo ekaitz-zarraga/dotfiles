@@ -39,6 +39,10 @@ set list lcs=trail:·,tab:»·
 " Always show tabline (0=never, 1=when there are at least 2 tabs, 2=always)
 set showtabline=1
 
+" Split on the right in vertical and below in horizontal
+set splitbelow
+set splitright
+
 " Explore configured to show tree
 let g:netrw_liststyle= 3
 
