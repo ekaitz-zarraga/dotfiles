@@ -90,7 +90,7 @@ set smartcase
 
 " Textwidth for automatic wrap, `gq` is formatting operation
 set textwidth=79
-set formatoptions=tcqj
+set formatoptions=jcroql
 
 " Highlight where the lines are more than 80 characters wide
 set colorcolumn=80
