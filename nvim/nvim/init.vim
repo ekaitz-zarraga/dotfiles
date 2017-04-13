@@ -85,6 +85,12 @@ nnoremap <CR> :noh<CR><CR>
 set ignorecase
 set smartcase
 
+" SPELLING
+
+" Highlight spelling errors in red and underline
+hi clear SpellBad
+hi SpellBad cterm=underline ctermfg=Red guifg=Red gui=underline
+
 
 " TEXT WIDTH
 
