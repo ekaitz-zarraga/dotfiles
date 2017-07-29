@@ -14,6 +14,9 @@ Plugin 'ekaitz-zarraga/droWMark'
 " CoffeeScript stuff
 Plugin 'kchmck/vim-coffee-script'
 
+" Paredit for clojure and lisp
+Plugin 'vim-scripts/paredit.vim'
+
 " Add plugins here
 
 call vundle#end()            " required
@@ -44,7 +47,11 @@ set splitbelow
 set splitright
 
 " Explore configured to show tree
-let g:netrw_liststyle= 3
+" don't use banner
+" always open files in previous window
+let g:netrw_liststyle    = 3
+let g:netrw_banner       = 0
+"let g:netrw_browse_split = 4
 
 " Mouse support
 set mouse=a
@@ -84,6 +91,7 @@ nnoremap <CR> :noh<CR><CR>
 " Ignore Case in search
 set ignorecase
 set smartcase
+
 
 " SPELLING
 
