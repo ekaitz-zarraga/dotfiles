@@ -20,3 +20,6 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# alias for Node.js projects
+alias ntree='tree -I node_modules'
