@@ -34,7 +34,7 @@ set termguicolors
 set background=dark
 
 " Set default colorscheme but dark comments -> Torte
-colorscheme torte
+colorscheme desert
 
 " Show trailing spaces
 set list lcs=trail:·,tab:»·
@@ -81,6 +81,8 @@ nnoremap <F2> :call TrimWhiteSpace()<CR>
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4
 set autoindent
 
+" Show matching parenthesis and brackets on close
+set showmatch
 
 " SEARCH
 
