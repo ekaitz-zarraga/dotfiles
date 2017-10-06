@@ -17,6 +17,9 @@ Plugin 'kchmck/vim-coffee-script'
 " Paredit for clojure and lisp
 Plugin 'vim-scripts/paredit.vim'
 
+" Syntax highlighting for Rust
+Plugin 'wting/rust.vim'
+
 " Add plugins here
 
 call vundle#end()            " required
@@ -117,7 +120,7 @@ highlight ColorColumn ctermbg=DarkGrey guibg=#262626
 " TERMINAL:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Make terminal remap to go out of insert mode
-:tnoremap <Esc> <C-\><C-n>
+:tnoremap <F1> <C-\><C-n>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
