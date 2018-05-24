@@ -14,11 +14,16 @@ Plugin 'ekaitz-zarraga/droWMark'
 " CoffeeScript stuff
 Plugin 'kchmck/vim-coffee-script'
 
-" Paredit for clojure and lisp
+" Paredit for Clojure and Lisp
 Plugin 'vim-scripts/paredit.vim'
+" Clojure REPL integration
+Plugin 'tpope/vim-fireplace'
 
 " Syntax highlighting for Rust
 Plugin 'wting/rust.vim'
+
+" Prose in Vim
+Plugin 'junegunn/goyo.vim'
 
 " Add plugins here
 
