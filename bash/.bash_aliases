@@ -23,3 +23,9 @@ alias l='ls -CF'
 
 # alias for Node.js projects
 alias ntree='tree -I node_modules'
+# alias for Clojure projects
+alias ctree='tree -I target'
+
+# Clean whiteboards!
+# found at: https://gist.github.com/lelandbatey/8677901
+alias whiteboard="convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2"
