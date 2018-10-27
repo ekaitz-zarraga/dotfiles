@@ -25,6 +25,9 @@ Plugin 'wting/rust.vim'
 " Write with no distractions
 Plugin 'junegunn/goyo.vim'
 
+" .editorconfig file support
+Plugin 'sgur/vim-editorconfig'
+
 " Add plugins here
 
 call vundle#end()            " required
