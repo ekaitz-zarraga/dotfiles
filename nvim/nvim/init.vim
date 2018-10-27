@@ -81,6 +81,9 @@ set backspace=indent,eol,start
 " Change buffers without needing to save
 set hidden
 
+" Maintain undo history between sessions
+set undofile
+
 " Clear trailing spaces on <F2>
 function TrimWhiteSpace()
   %s/\s*$//
