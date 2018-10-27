@@ -22,7 +22,7 @@ Plugin 'tpope/vim-fireplace'
 " Syntax highlighting for Rust
 Plugin 'wting/rust.vim'
 
-" Prose in Vim
+" Write with no distractions
 Plugin 'junegunn/goyo.vim'
 
 " Add plugins here
