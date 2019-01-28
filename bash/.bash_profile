@@ -15,13 +15,11 @@ fi
 export TERM=xterm-256color
 
 # NeoVim configuration
-################################################################
 # Create .config if it doesn't exist and set XDG vars
 mkdir -p $HOME/.config
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:=$HOME/.config}
 export XDG_DATA_HOME=${XDG_DATA_HOME:=$HOME/.config}
 
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Pandoc bash completion
 eval "$(pandoc --bash-completion)"
