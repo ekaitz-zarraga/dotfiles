@@ -29,3 +29,8 @@ alias ctree='tree -I target'
 # Clean whiteboards!
 # found at: https://gist.github.com/lelandbatey/8677901
 alias whiteboard="convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2"
+
+# Pandoc for ElenQ
+alias pandoc-xelatex="pandoc $@ --latex-engine=xelatex --to latex -N"
+alias elenqdoc-article="pandoc-xelatex $@ --template elenq-article --metadata=documentclass:article"
+alias elenqdoc-book="pandoc-xelatex $@  --template elenq-book --metadata=documentclass:book"
