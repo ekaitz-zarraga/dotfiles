@@ -47,6 +47,13 @@ set background=dark
 " Set default colorscheme but dark comments -> Torte
 colorscheme desert
 
+" Highligh column and line
+" set cursorcolumn
+set cursorline
+highlight CursorColumn ctermbg=DarkGrey guibg=#262626
+highlight CursorLine ctermbg=DarkGrey guibg=#262626
+highlight! link CursorColumn CursorLine
+
 " Show trailing spaces
 set list lcs=trail:·,tab:»·
 
@@ -58,11 +65,11 @@ set splitbelow
 set splitright
 
 " Explore configured to show tree
-" don't use banner
+" Use a banner
 " always open files in previous window
-let g:netrw_liststyle    = 3
-let g:netrw_banner       = 0
-"let g:netrw_browse_split = 4
+let g:netrw_liststyle    = 1
+let g:netrw_banner       = 1
+let g:netrw_winsize      = 75 " % of window by v or o operation
 
 " Mouse support
 set mouse=a
