@@ -28,10 +28,14 @@ Plugin 'junegunn/goyo.vim'
 " .editorconfig file support
 Plugin 'sgur/vim-editorconfig'
 
+" Dracula colorscheme, just for testing
+Plugin 'dracula/vim'
+
 " Add plugins here
 
 call vundle#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 " GUI:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -44,8 +48,9 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 set termguicolors
 set background=dark
 
-" Set default colorscheme but dark comments -> Torte
-colorscheme desert
+" Set default colorscheme
+" colorscheme desert
+colorscheme dracula
 
 " Highligh column and line
 " set cursorcolumn
