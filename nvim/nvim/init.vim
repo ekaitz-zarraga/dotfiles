@@ -87,6 +87,9 @@ set foldlevelstart=99
 " EDITION:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Completion
+set complete=.,w,b,u,t,i,kspell
+
 " Allow backspace always
 set backspace=indent,eol,start
 
@@ -109,6 +112,13 @@ set autoindent
 
 " Show matching parenthesis and brackets on close
 set showmatch
+
+" Disable modelines (they have vulnerabilities)
+set nomodeline
+
+" Allow saving of files as sudo
+" TODO LOOK FOR A BETTER WAY TO DO THIS
+" cmap w!! w !sudo tee > /dev/null %
 
 " SEARCH
 
