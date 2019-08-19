@@ -100,11 +100,6 @@ export COLOR_WHITE=$COLOR_DEFAULT
 
 export EDITOR=vim
 
-# Create .config if it doesn't exist and set XDG vars if they are unset
-mkdir -p $HOME/.config
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:=$HOME/.config}
-export XDG_DATA_HOME=${XDG_DATA_HOME:=$HOME/.config}
-
 # Guile (guix)
 export GUILE_LOAD_PATH="$HOME/.guix-profile/share/guile/site/2.2${GUILE_LOAD_PATH:+:}$GUILE_LOAD_PATH"
 export GUILE_LOAD_COMPILED_PATH="$HOME/.guix-profile/lib/guile/2.2/site-ccache${GUILE_LOAD_COMPILED_PATH:+:}$GUILE_LOAD_COMPILED_PATH"
