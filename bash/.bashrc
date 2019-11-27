@@ -98,7 +98,7 @@ export COLOR_GREY="\[\033[0;37m\]"
 export COLOR_DEFAULT="\[\033[0;39m\]"
 export COLOR_WHITE=$COLOR_DEFAULT
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # Guile (guix)
 export GUILE_LOAD_PATH="$HOME/.guix-profile/share/guile/site/2.2${GUILE_LOAD_PATH:+:}$GUILE_LOAD_PATH"
@@ -107,6 +107,7 @@ export GUILE_LOAD_COMPILED_PATH="$HOME/.guix-profile/lib/guile/2.2/site-ccache${
 export PATH="$HOME/.config/guix/current/bin${PATH:+:}$PATH"
 export PATH="$HOME/.guix-profile/bin${PATH:+:}$PATH"
 export GUIX_LOCPATH="$HOME/.guix-profile/lib/locale" # Locale directory
+
 ######################################################################
 
 # Pandoc bash completion
@@ -134,6 +135,8 @@ then
     PS1GUIXENV="$COLOR_RED(guixenv)$COLOR_DEFAULT"
     PS1="${PS1BASE}${PS1GIT}${PS1GUIXENV}${PS1END}"
 fi
+export SSL_CERT_DIR="$HOME/.guix-profile/etc/ssl/certs"
+export SSL_CERT_FILE="$HOME/.guix-profile/etc/ssl/certs/ca-certificates.crt"
 
 # Python virtualenvwrapper
 export WORKON_HOME=~/Envs
