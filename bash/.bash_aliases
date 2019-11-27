@@ -1,4 +1,5 @@
 # vimdiff style with nvim
+alias vim='nvim'
 alias nvimdiff='nvim -d'
 
 # ssh as root -> Sysadmin trick
@@ -36,6 +37,7 @@ alias ctree='tree -I target'
 alias whiteboard="convert $1 -morphology Convolve DoG:15,100,0 -negate -normalize -blur 0x1 -channel RBG -level 60%,91%,0.1 $2"
 
 # Pandoc for ElenQ
-alias pandoc-xelatex="pandoc $@ --latex-engine=xelatex --to latex -N"
-alias elenqdoc-article="pandoc-xelatex $@ --template elenq-article --metadata=documentclass:article"
-alias elenqdoc-book="pandoc-xelatex $@  --template elenq-book --metadata=documentclass:book"
+alias pandoc-xelatex="pandoc $@ --pdf-engine=xelatex --to latex -N"
+alias elenqdoc-article="pandoc-xelatex $@ --standalone --template elenq-article --metadata=documentclass:article"
+alias elenqdoc-book="pandoc-xelatex $@  --standalone --template elenq-book --metadata=documentclass:book --top-level-division=chapter"
+
