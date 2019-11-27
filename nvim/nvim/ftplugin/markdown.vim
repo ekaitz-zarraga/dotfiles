@@ -11,3 +11,6 @@ augroup SENTENCES
 augroup END
 
 let g:markdown_folding=1
+
+" Syncronize syntax from the beginning of the file
+:syntax sync fromstart
