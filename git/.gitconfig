@@ -1,14 +1,14 @@
 [user]
-	email = ekaitz.zarraga@protonmail.com
-	name = Ekaitz Zárraga
+	email = ekaitz@elenq.tech
+	name = Ekaitz Zarraga
 [core]
-	editor = vim
+	editor = nvim
 [color]
 	ui = auto
 [diff]
-	tool = vimdiff
+	tool = nvimdiff
 [merge]
-	tool = vimdiff
+	tool = nvimdiff
 [push]
 	default = simple
 [alias]
