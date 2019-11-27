@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ekaitz-zarraga/droWMark'
 
 " CoffeeScript stuff
-Plugin 'kchmck/vim-coffee-script'
+" Plugin 'kchmck/vim-coffee-script'
 
 " Paredit for Clojure and Lisp
 Plugin 'vim-scripts/paredit.vim'
@@ -28,8 +28,14 @@ Plugin 'junegunn/goyo.vim'
 " .editorconfig file support
 Plugin 'sgur/vim-editorconfig'
 
-" Dracula colorscheme, just for testing
+" Dracula colorscheme
 Plugin 'dracula/vim'
+
+" HTML5
+Plugin 'othree/html5.vim'
+
+" Russian keyboard support
+Plugin 'powerman/vim-plugin-ruscmd.git'
 
 " Add plugins here
 
