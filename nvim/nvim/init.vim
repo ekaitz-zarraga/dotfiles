@@ -128,9 +128,8 @@ set nomodeline
 
 " SEARCH
 
-" HighLight search and map CarrierReturn to remove highlight
+" HighLight search
 set hlsearch
-nnoremap <CR> :noh<CR><CR>
 
 " Ignore Case in search
 set ignorecase
