@@ -2,8 +2,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 filetype off
-set rtp+=$XDG_CONFIG_HOME/nvim/bundle/Vundle.vim
-call vundle#begin($XDG_CONFIG_HOME . '/nvim/bundle/')
+set rtp+=$HOME/.config/nvim/bundle/Vundle.vim
+call vundle#begin($HOME . '/.config/nvim/bundle/')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -134,13 +134,6 @@ set hlsearch
 " Ignore Case in search
 set ignorecase
 set smartcase
-
-
-" SPELLING
-
-" Highlight spelling errors in red and underline
-hi clear SpellBad
-hi SpellBad cterm=underline ctermfg=Red guifg=Red gui=underline
 
 
 " TEXT WIDTH

@@ -1,5 +1,4 @@
 # Configuration files
-My dotfiles. Vim, NeoVim, Git, Tmux and Bash for now.
 
 Use `install.sh` to install the dotfiles. It uses `stow` internally.
 

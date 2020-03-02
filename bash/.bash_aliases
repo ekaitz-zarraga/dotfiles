@@ -9,13 +9,10 @@ alias r='ssh -l root'
 alias fuck='COMMAND=$(history -p \!\!); echo sudo $COMMAND; sudo $COMMAND'
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -41,3 +38,7 @@ alias pandoc-xelatex="pandoc $@ --pdf-engine=xelatex --to latex -N"
 alias elenqdoc-article="pandoc-xelatex $@ --standalone --template elenq-article --metadata=documentclass:article"
 alias elenqdoc-book="pandoc-xelatex $@  --standalone --template elenq-book --metadata=documentclass:book --top-level-division=chapter"
 
+# Kitty
+if [ $TERM = "xterm-kitty" ]; then
+    alias ssh="kitty +kitten ssh"
+fi
