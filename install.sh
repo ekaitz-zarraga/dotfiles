@@ -12,5 +12,8 @@ stow -Rt ${XDG_CONFIG_HOME:=$HOME/.config} nvim
 # kitty
 stow -Rt "${XDG_CONFIG_HOME:=$HOME/.config}/kitty" kitty
 
+# Guix channels
+stow -Rt "${XDG_CONFIG_HOME:=$HOME/.config}/guix" guix
+
 # Plasma session environment variables
 #stow -Rt "${XDG_CONFIG_HOME:=$HOME/.config}/plasma-workspace/env" plasma-env
