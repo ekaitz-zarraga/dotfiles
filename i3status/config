@@ -1,0 +1,48 @@
+general {
+        colors = true
+        color_good =     "#a3be8c"
+        color_bad =      "#bf616a"
+        color_degraded = "#d08770"
+        output_format = "i3bar"
+        interval = 1
+}
+
+order += "disk /"
+order += "battery 0"
+order += "cpu_temperature 0"
+order += "load"
+order += "time"
+order += "volume master"
+
+battery 0 {
+        format = "%status %percentage %remaining %emptytime"
+        format_down = "No battery"
+        status_chr = "⚡ CHR"
+        status_bat = "🔋 BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
+        low_threshold = 10
+}
+
+time {
+        format = "%Y-%m-%d %H:%M:%S"
+}
+
+load {
+        format = "%5min"
+}
+
+cpu_temperature 0 {
+        format = "T: %degrees °C"
+}
+
+disk "/" {
+        format = "%free"
+}
+
+volume master {
+        format = "Vol:%volume"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
