@@ -1,2 +1,5 @@
 setlocal foldmethod=syntax
-setlocal syntax=c.doxygen
+
+if b:current_syntax ==? "c"
+    setlocal syntax=c.doxygen
+endif
