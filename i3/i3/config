@@ -34,12 +34,12 @@ exec --no-startup-id nm-applet
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Brightness control
-bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp   exec light -A 5  # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5  # decrease screen brightness
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -70,10 +70,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+ntilde move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -82,10 +82,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+Shift+h split h
+bindsym $mod+Control+h split h
 
 # split in vertical orientation
-bindsym $mod+Shift+v split v
+bindsym $mod+Control+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -159,10 +159,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym ntilde resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -183,3 +183,19 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+
+## Clipboard Screenshots
+bindsym Print       exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+
+# TODO:
+#bindsym XF86TouchpadToggle       exec xinput --disable 12
+#bindsym XF86TouchpadToggle       exec xinput --enable  12
+bindsym $mod+Shift+t exec xinput --enable  12
+bindsym $mod+t       exec xinput --disable  12
+
+
+# Keyboard layout change
+# bindsym $mod+x exec setxkbmap ru

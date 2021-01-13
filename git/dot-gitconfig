@@ -13,3 +13,5 @@
 	default = simple
 [alias]
 	lg = log --graph --oneline --decorate --all
+[pull]
+	ff = only
