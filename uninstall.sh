@@ -4,7 +4,12 @@
 stow -Dt ~ bash tmux git
 
 # Link at XDG_CONFIG_HOME if set, if not to $HOME/.config (they should be the same)
+
+# NeoVim
 stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} -D nvim
+
+# Shepherd
+stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} shepherd
 
 # konsole colors
 # stow -Rt "${XDG_CONFIG_HOME:=$HOME/.config}/konsole" konsole
