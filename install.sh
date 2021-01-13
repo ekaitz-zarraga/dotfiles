@@ -23,3 +23,6 @@ stow -Rt ${XDG_CONFIG_HOME:=$HOME/.config} i3status
 
 # Shepherd user services
 stow -Rt ${XDG_CONFIG_HOME:=$HOME/.config} shepherd
+
+# Redshift
+stow -Rt ${XDG_CONFIG_HOME:=$HOME/.config} redshift

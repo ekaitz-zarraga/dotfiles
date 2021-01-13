@@ -17,6 +17,9 @@ stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} shepherd
 # kitty
 stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} kitty
 
+# redshift
+stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} redshift
+
 # Guix channels
 stow -Dt "${XDG_CONFIG_HOME:=$HOME/.config}/guix" guix
 
