@@ -1,7 +1,12 @@
 # Bash initialization for interactive non-login shells and
 # for remote shells (info "(bash) Bash Startup Files").
-
 export SHELL
+eval `dircolors`
+
+
+# Disable xon xoff for Ctrl+S support
+stty -ixon
+
 
 if [[ $- != *i* ]]
 then
@@ -18,6 +23,7 @@ source /etc/bashrc
 
 # VARIABLE EXPORTS
 ######################################################################
+# Colors
 export COLOR_BLACK="\[\033[0;30m\]"
 export COLOR_RED="\[\033[0;31m\]"
 export COLOR_GREEN="\[\033[0;32m\]"
@@ -29,7 +35,15 @@ export COLOR_GREY="\[\033[0;37m\]"
 export COLOR_DEFAULT="\[\033[0;39m\]"
 export COLOR_WHITE=$COLOR_DEFAULT
 
+# History length and control
+export HISTCONTROL=ignoreboth
+export HISTSIZE=1000
+export HISTTIMEFORMAT="[%F %T] "
+
+# Editors
 export EDITOR=nvim
+export PAGER=less
+
 PATH=$PATH:$HOME/.local/bin
 
 # PROMPT
@@ -63,3 +77,5 @@ if [ -f ~/.bash_aliases ] ; then
     . ~/.bash_aliases
 fi
 
+# Keyboard layout control spanish - russian
+setxkbmap  -layout es,ru -option "grp:alt_space_toggle"

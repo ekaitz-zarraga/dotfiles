@@ -1,5 +1,6 @@
 # vimdiff style with nvim
 alias vim='nvim'
+alias vi='nvim'
 alias nvimdiff='nvim -d'
 
 # ssh as root -> Sysadmin trick
@@ -19,11 +20,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-
 # alias for Node.js projects
 alias ntree='tree -I node_modules'
 # alias for Clojure projects
@@ -35,10 +31,14 @@ alias whiteboard="convert $1 -morphology Convolve DoG:15,100,0 -negate -normaliz
 
 # Pandoc for ElenQ
 alias pandoc-xelatex="pandoc $@ --pdf-engine=xelatex --to latex -N"
-alias elenqdoc-article="pandoc-xelatex $@ --standalone --template elenq-article --metadata=documentclass:article"
-alias elenqdoc-book="pandoc-xelatex $@  --standalone --template elenq-book --metadata=documentclass:book --top-level-division=chapter"
+alias elenqdoc-article="pandoc-xelatex $@ --standalone --template elenq-article --metadata=documentclass:article --resource-path=~/.pandoc:."
+alias elenqdoc-book="pandoc-xelatex $@  --standalone --template elenq-book --metadata=documentclass:book --top-level-division=chapter --resource-path=~/.pandoc:."
 
 # Kitty
 if [ $TERM = "xterm-kitty" ]; then
     alias ssh="kitty +kitten ssh"
+    alias _ssh="ssh"
 fi
+
+# Open using xdg
+alias open="xdg-open $@ &>/dev/null"
