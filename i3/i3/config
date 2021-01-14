@@ -196,6 +196,5 @@ bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipbo
 bindsym $mod+Shift+t exec xinput --enable  12
 bindsym $mod+t       exec xinput --disable  12
 
-
-# Keyboard layout change
-# bindsym $mod+x exec setxkbmap ru
+# Start user-level service cotrol with shepherd
+exec --no-startup-id shepherd

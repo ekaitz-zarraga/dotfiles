@@ -3,3 +3,4 @@ nvim/nvim/bundle/
 nvim/nvim/shada/
 nvim/nvim/swap/
 nvim/nvim/undo/
+*.log
