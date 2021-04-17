@@ -48,6 +48,12 @@ call vundle#end()            " required
 " Activate syntax highlighting by default
 syntax on
 
+" Keep 10 lines of space from the cursor to the window corners
+set scrolloff=10
+
+" Show completion in a menu
+set wildmenu
+
 " Enable TRUE COLORS
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
@@ -127,6 +133,20 @@ set nomodeline
 " cmap w!! w !sudo tee > /dev/null %
 
 " SEARCH
+
+" Search through files in the current tree (like :find)
+set path+=**
+
+" Make ctags so we can search with ^] and g^] and ^t
+command! MakeTags !ctags -R .
+
+" Use ripgrep as search tool
+if executable("rg")
+    set grepprg=rg\ --vimgrep\ --no-heading
+    set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
+
+command! -nargs=+ Sgrep execute 'silent grep! <args>' | copen 10
 
 " HighLight search
 set hlsearch
