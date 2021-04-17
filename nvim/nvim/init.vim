@@ -37,6 +37,15 @@ Plugin 'othree/html5.vim'
 " Russian keyboard support
 Plugin 'powerman/vim-plugin-ruscmd.git'
 
+" Recutils support
+Plugin 'zaid/vim-rec'
+
+" Common-Lisp
+" Plugin 'vlime/vlime', {'rtp': 'vim/'}
+
+" Combustion-testing
+" Plugin 'git@gitlab.com:ElenQ/combustion.git'
+
 " Add plugins here
 
 call vundle#end()            " required
