@@ -42,3 +42,15 @@ fi
 
 # Open using xdg
 alias open="xdg-open $@ &>/dev/null"
+
+# Reasonable looking calendar
+alias cal="cal -m"
+alias _cal="cal"
+
+# Twitch
+function twitch {
+    mpv "https://twitch.tv/$1"
+}
+
+# Clipboard
+alias clipboard="xclip -selection clipboard"
