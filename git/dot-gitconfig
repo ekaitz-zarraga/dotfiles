@@ -15,3 +15,5 @@
 	lg = log --graph --oneline --decorate --all
 [pull]
 	ff = only
+[init]
+	defaultBranch = master
