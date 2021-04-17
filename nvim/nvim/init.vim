@@ -116,7 +116,9 @@ function TrimWhiteSpace()
   %s/\s*$//
   ''
 :endfunction
+" Whitexpace trimmer available in normal and edit mode
 nnoremap <F2> :call TrimWhiteSpace()<CR>
+inoremap <F2> <ESC>:call TrimWhiteSpace()<CR>
 
 " Default tabs
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4
