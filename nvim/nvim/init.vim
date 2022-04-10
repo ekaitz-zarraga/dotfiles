@@ -64,7 +64,8 @@ call vundle#end()            " required
 syntax on
 
 " Keep 10 lines of space from the cursor to the window corners
-set scrolloff=10
+" I don't like this, prefer to use zz
+" set scrolloff=10
 
 " Show completion in a menu
 set wildmenu
@@ -113,7 +114,6 @@ set foldlevelstart=99
 
 " EDITION:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Completion
 set complete=.,w,b,u,t,i,kspell
 
@@ -131,9 +131,22 @@ function TrimWhiteSpace()
   %s/\s*$//
   ''
 :endfunction
+function TrimWhiteSpaceVisual()
+  '<,'>s/\s*$//
+  ''
+:endfunction
 " Whitexpace trimmer available in normal and edit mode
 nnoremap <F2> :call TrimWhiteSpace()<CR>
 inoremap <F2> <ESC>:call TrimWhiteSpace()<CR>
+vnoremap <F2> :call TrimWhiteSpaceVisual()<CR>
+
+" Scissors
+" TODO: improve this
+function AddScissors()
+    execute "normal i--8<---------------cut here---------------start------------->8---\n"
+    execute "normal i--8<---------------cut here---------------end--------------->8---\n"
+:endfunction
+command! Scissors execute 'call AddScissors()'
 
 " Default tabs
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4
