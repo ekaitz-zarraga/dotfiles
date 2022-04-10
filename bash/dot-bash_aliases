@@ -34,12 +34,6 @@ alias pandoc-xelatex="pandoc $@ --pdf-engine=xelatex --to latex -N"
 alias elenqdoc-article="pandoc-xelatex $@ --standalone --template elenq-article --metadata=documentclass:article --resource-path=~/.pandoc:."
 alias elenqdoc-book="pandoc-xelatex $@  --standalone --template elenq-book --metadata=documentclass:book --top-level-division=chapter --resource-path=~/.pandoc:."
 
-# Kitty
-if [ $TERM = "xterm-kitty" ]; then
-    alias ssh="kitty +kitten ssh"
-    alias _ssh="ssh"
-fi
-
 # Open using xdg
 alias open="xdg-open $@ &>/dev/null"
 
@@ -54,3 +48,12 @@ function twitch {
 
 # Clipboard
 alias clipboard="xclip -selection clipboard"
+
+# Tilde.team
+alias tilde="ssh tilde.team"
+
+# Youtube-dl playlist
+alias yt-dlp-playlist="yt-dl -o '%(playlist_index)s-%(title)s.%(ext)s' $@"
+
+# Email write in vim
+alias mail='vim +"set ft=markdown"'
