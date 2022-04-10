@@ -40,6 +40,12 @@ Plugin 'powerman/vim-plugin-ruscmd.git'
 " Recutils support
 Plugin 'zaid/vim-rec'
 
+" Guix
+Plugin 'https://gitlab.com/Efraim/guix.vim'
+
+" Repl
+Plugin 'https://gitlab.com/HiPhish/repl.nvim.git'
+
 " Common-Lisp
 " Plugin 'vlime/vlime', {'rtp': 'vim/'}
 
@@ -183,6 +189,17 @@ highlight ColorColumn ctermbg=DarkGrey guibg=#262626
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Make terminal remap to go out of insert mode
 :tnoremap <F1> <C-\><C-n>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" REPL: repl.vim:
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Send the text of a motion to the REPL
+nmap <leader>rs  <Plug>(ReplSend)
+" Send the current line to the REPL
+nmap <leader>rss <Plug>(ReplSendLine)
+nmap <leader>rs_ <Plug>(ReplSendLine)
+" Send the selected text to the REPL
+vmap <leader>rs  <Plug>(ReplSend)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
