@@ -36,7 +36,8 @@ export COLOR_DEFAULT="\[\033[0;39m\]"
 export COLOR_WHITE=$COLOR_DEFAULT
 
 # History length and control
-export HISTCONTROL=ignoreboth
+shopt -s histappend
+export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=1000
 export HISTTIMEFORMAT="[%F %T] "
 
