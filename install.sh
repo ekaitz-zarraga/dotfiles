@@ -13,6 +13,8 @@ stow -Rt $XDG_CONFIG_HOME nvim
 
 # kitty
 stow -Rt $XDG_CONFIG_HOME kitty
+# Alacritty (tries to replace kitty)
+stow -Rt $XDG_CONFIG_HOME alacritty
 
 # Guix channels
 stow -Rt "$XDG_CONFIG_HOME/guix" guix
