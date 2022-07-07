@@ -107,7 +107,7 @@ set foldlevelstart=99
 " EDITION:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Completion
-set complete=.,w,b,u,t,i,kspell
+set complete=.,w,b,u,t,i
 
 " Allow backspace always
 set backspace=indent,eol,start
