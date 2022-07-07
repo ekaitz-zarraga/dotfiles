@@ -1,60 +1,52 @@
-" VUNDLE:
+" Vim Plug:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 filetype off
-set rtp+=$HOME/.config/nvim/bundle/Vundle.vim
-call vundle#begin($HOME . '/.config/nvim/bundle/')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
 
 " Post to Wordpress using MarkDown
-Plugin 'ekaitz-zarraga/droWMark'
+" Plug 'ekaitz-zarraga/droWMark'
 
 " CoffeeScript stuff
-" Plugin 'kchmck/vim-coffee-script'
+" Plug 'kchmck/vim-coffee-script'
 
 " Paredit for Clojure and Lisp
-Plugin 'vim-scripts/paredit.vim'
-" Clojure REPL integration
-Plugin 'tpope/vim-fireplace'
+Plug 'vim-scripts/paredit.vim'
 
-" Syntax highlighting for Rust
-Plugin 'wting/rust.vim'
+" Clojure REPL integration ---> Conjure does this and more
+" Plug 'tpope/vim-fireplace'
 
 " Write with no distractions
-Plugin 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'
 
 " .editorconfig file support
-Plugin 'sgur/vim-editorconfig'
+Plug 'sgur/vim-editorconfig'
 
 " Dracula colorscheme
-Plugin 'dracula/vim'
+Plug 'dracula/vim'
 
 " HTML5
-Plugin 'othree/html5.vim'
-
-" Russian keyboard support
-Plugin 'powerman/vim-plugin-ruscmd.git'
+Plug 'othree/html5.vim'
 
 " Recutils support
-Plugin 'zaid/vim-rec'
+Plug 'zaid/vim-rec'
 
 " Guix
-Plugin 'https://gitlab.com/Efraim/guix.vim'
+Plug 'https://gitlab.com/Efraim/guix.vim'
+
+" Conjure: lispy things! this is what I wanted to do with combustion!
+Plug 'Olical/conjure', { 'on': 'ConjureConnect' }
 
 " Repl
-Plugin 'https://gitlab.com/HiPhish/repl.nvim.git'
-
-" Common-Lisp
-" Plugin 'vlime/vlime', {'rtp': 'vim/'}
+" Plug 'https://gitlab.com/HiPhish/repl.nvim.git'
 
 " Combustion-testing
-" Plugin 'git@gitlab.com:ElenQ/combustion.git'
+" Plug 'git@gitlab.com:ElenQ/combustion.git'
 
 " Add plugins here
 
-call vundle#end()            " required
+call plug#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -203,18 +195,6 @@ highlight ColorColumn ctermbg=DarkGrey guibg=#262626
 " Make terminal remap to go out of insert mode
 :tnoremap <F1> <C-\><C-n>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" REPL: repl.vim:
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Send the text of a motion to the REPL
-nmap <leader>rs  <Plug>(ReplSend)
-" Send the current line to the REPL
-nmap <leader>rss <Plug>(ReplSendLine)
-nmap <leader>rs_ <Plug>(ReplSendLine)
-" Send the selected text to the REPL
-vmap <leader>rs  <Plug>(ReplSend)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 " Different config for each filetype
 filetype plugin on
