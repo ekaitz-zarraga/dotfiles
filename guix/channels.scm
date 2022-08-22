@@ -4,5 +4,5 @@
     (url "https://gitlab.com/nonguix/nonguix"))
   (channel
     (name 'ekaitz)
-    (url "https://gitlab.com/ekaitz-zarraga/guix-packages"))
+    (url "git://git.elenq.tech/guix-packages"))
   %default-channels)
