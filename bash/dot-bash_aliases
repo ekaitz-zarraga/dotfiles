@@ -53,7 +53,7 @@ alias clipboard="xclip -selection clipboard"
 alias tilde="ssh tilde.team"
 
 # Youtube-dl playlist
-alias yt-dlp-playlist="yt-dl -o '%(playlist_index)s-%(title)s.%(ext)s' $@"
+alias yt-dlp-playlist="yt-dlp -o '%(playlist_index)s-%(title)s.%(ext)s' $@"
 
 # Email write in vim
 alias mail='vim +"set ft=markdown"'
