@@ -5,6 +5,9 @@ filetype off
 
 call plug#begin()
 
+" Better syntax highlighting with treesitter
+Plug 'nvim-treesitter/nvim-treesitter' ", {'do': ':TSUpdate'}
+
 " Post to Wordpress using MarkDown
 " Plug 'ekaitz-zarraga/droWMark'
 
@@ -36,7 +39,12 @@ Plug 'zaid/vim-rec'
 Plug 'https://gitlab.com/Efraim/guix.vim'
 
 " Conjure: lispy things! this is what I wanted to do with combustion!
-Plug 'Olical/conjure', { 'on': 'ConjureConnect' }
+Plug 'Olical/conjure'
+let g:conjure#client_on_load = v:false
+let g:conjure#filetype#scheme = "conjure.client.guile.socket"
+let g:conjure#debug = v:true
+let g:maplocalleader = ","
+
 
 " Repl
 " Plug 'https://gitlab.com/HiPhish/repl.nvim.git'
@@ -52,8 +60,12 @@ call plug#end()            " required
 
 " GUI:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Activate syntax highlighting by default
+" Activate syntax highlighting by default and make it almost work properly
 syntax on
+syntax sync fromstart
+set redrawtime=10000
+" Maybe with tree-sitter we don't need this anymore
+nnoremap <F5> :syntax sync fromstart<CR>
 
 " Keep 10 lines of space from the cursor to the window corners
 " I don't like this, prefer to use zz
@@ -100,7 +112,9 @@ let g:netrw_winsize      = 75 " % of window by v or o operation
 set mouse=a
 
 " Fold
-set foldmethod=indent
+" set foldmethod=indent
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 set foldlevelstart=99
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -198,3 +212,51 @@ highlight ColorColumn ctermbg=DarkGrey guibg=#262626
 
 " Different config for each filetype
 filetype plugin on
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Whitespace: highlight
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * call clearmatches()
+autocmd BufWinLeave * call clearmatches()
+
+
+" Configure Treesitter
+lua << ENDMARK
+require'nvim-treesitter.configs'.setup {
+  -- A list of parser names, or "all"
+  ensure_installed = { "c", "cpp", "lua", "python", "scheme", "javascript", fennel },
+
+  -- Install parsers synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+  -- Automatically install missing parsers when entering buffer
+  auto_install = false,
+
+  -- List of parsers to ignore installing (for "all")
+  ignore_install = {},
+
+  highlight = {
+    -- `false` will disable the whole extension
+    enable = true,
+
+    -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+    -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+    -- the name of the parser)
+    -- list of language that will be disabled
+    disable = {},
+
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+ENDMARK
+" Redraw the syntax if the tree and the file went out of sync
+" nnoremap <F6> :write | edit | TSBufEnable highlight
+au FileType fennel call PareditInitBuffer()
