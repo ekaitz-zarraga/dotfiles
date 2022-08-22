@@ -9,10 +9,12 @@
 	tool = nvimdiff
 [merge]
 	tool = nvimdiff
+	conflictStyle = diff3
 [push]
 	default = simple
 [alias]
 	lg = log --graph --oneline --decorate --all
+	overview = log --graph --oneline --decorate --all --simplify-by-decoration
 [pull]
 	ff = only
 [init]
