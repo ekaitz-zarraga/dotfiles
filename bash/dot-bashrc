@@ -82,4 +82,4 @@ if [ -f ~/.bash_aliases ] ; then
 fi
 
 # Keyboard layout control spanish - russian
-setxkbmap  -layout es,ru -option "grp:alt_space_toggle"
+# setxkbmap  -layout es,en_US,ru -option "grp:alt_space_toggle"
