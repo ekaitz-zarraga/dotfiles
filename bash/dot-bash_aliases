@@ -24,6 +24,8 @@ alias l='ls -CF'
 alias ntree='tree -I node_modules'
 # alias for Clojure projects
 alias ctree='tree -I target'
+# alias for Zig projects
+alias ztree='tree -I zig-cache'
 
 # Clean whiteboards!
 # found at: https://gist.github.com/lelandbatey/8677901
