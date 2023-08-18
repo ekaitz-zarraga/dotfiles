@@ -57,3 +57,5 @@ alias yt-dlp-playlist="yt-dlp -o '%(playlist_index)s-%(title)s.%(ext)s' $@"
 
 # Email write in vim
 alias mail='vim +"set ft=markdown"'
+
+alias yt-album-playlist='yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --parse-metadata "playlist_index:%(track_number)s" --add-metadata --embed-metadata --output "%(playlist_autonumber)02d - %(title)s.%(ext)s" --yes-playlist'
