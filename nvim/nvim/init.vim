@@ -15,7 +15,8 @@ Plug 'nvim-treesitter/nvim-treesitter' ", {'do': ':TSUpdate'}
 " Plug 'kchmck/vim-coffee-script'
 
 " Paredit for Clojure and Lisp
-Plug 'vim-scripts/paredit.vim'
+" Plug 'vim-scripts/paredit.vim'
+Plug 'kovisoft/paredit'
 
 " Clojure REPL integration ---> Conjure does this and more
 " Plug 'tpope/vim-fireplace'
@@ -37,6 +38,10 @@ Plug 'zaid/vim-rec'
 
 " Guix
 Plug 'https://gitlab.com/Efraim/guix.vim'
+
+" Zig
+Plug 'ziglang/zig.vim'
+let g:zig_fmt_autosave = 0
 
 " Conjure: lispy things! this is what I wanted to do with combustion!
 Plug 'Olical/conjure'
@@ -161,8 +166,8 @@ set autoindent
 " Show matching parenthesis and brackets on close
 set showmatch
 
-" Disable modelines (they have vulnerabilities)
-set nomodeline
+" Enable modelines (they have vulnerabilities, but it should be fine LOL)
+set modeline
 
 " Allow saving of files as sudo
 " TODO LOOK FOR A BETTER WAY TO DO THIS
@@ -172,6 +177,9 @@ set nomodeline
 
 " Search through files in the current tree (like :find)
 set path+=**
+
+" Ignore .go files (guile object)
+set wildignore+=*.go
 
 " Make ctags so we can search with ^] and g^] and ^t
 command! MakeTags !ctags -R .
@@ -229,7 +237,8 @@ autocmd BufWinLeave * call clearmatches()
 lua << ENDMARK
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "c", "cpp", "lua", "python", "scheme", "javascript", fennel },
+  ensure_installed = { "c", "cpp", "lua", "python", "scheme", "javascript",
+    "fennel", "zig" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
