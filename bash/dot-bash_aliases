@@ -62,6 +62,25 @@ alias mail='vim +"set ft=markdown"'
 
 alias yt-album-playlist='yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --parse-metadata "playlist_index:%(track_number)s" --add-metadata --embed-metadata --output "%(playlist_autonumber)02d - %(title)s.%(ext)s" --yes-playlist'
 
+# Easy audio recording
+alias audio_list_sources="pactl list short sources"
+function audio_record_from {
+    # https://trac.ffmpeg.org/wiki/Capture/PulseAudio
+    if ffmpeg -f pulse -i $1 -c:a libvorbis recording.ogg ; then
+        echo
+        echo Written output file to: recording.ogg
+        echo
+    fi
+}
+function audio_encode_vorbis {
+    local outfile="${2%.*}".ogg
+    if ffmpeg -i "$1" -vn -c:a libvorbis "${outfile}" ; then
+        echo
+        echo Written output file to: "${outfile}"
+        echo
+    fi
+}
+
 # Wacom mapping
 function wacom_map {
     for i in $2; do
