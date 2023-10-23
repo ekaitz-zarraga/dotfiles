@@ -65,6 +65,14 @@ alias mail='vim +"set ft=markdown"'
 alias yt-album-playlist='yt-dlp --ignore-errors --format bestaudio --extract-audio --audio-format mp3 --audio-quality 160K --parse-metadata "playlist_index:%(track_number)s" --add-metadata --embed-metadata --output "%(playlist_autonumber)02d - %(title)s.%(ext)s" --yes-playlist'
 
 # Easy audio recording
+function audio-volume-detect {
+    # https://trac.ffmpeg.org/wiki/AudioVolume
+    ffmpeg -i "$1" -filter:a volumedetect -f null /dev/null
+}
+function audio-volume-up-db {
+    # https://trac.ffmpeg.org/wiki/AudioVolume
+    ffmpeg -i "$1" -filter:a "volume=$3dB" "$2"
+}
 alias audio_list_sources="pactl list short sources"
 function audio_record_from {
     # https://trac.ffmpeg.org/wiki/Capture/PulseAudio
