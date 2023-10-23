@@ -74,7 +74,7 @@ function audio-volume-up-db {
     ffmpeg -i "$1" -filter:a "volume=$3dB" "$2"
 }
 alias audio_list_sources="pactl list short sources"
-function audio_record_from {
+function audio-record-from {
     # https://trac.ffmpeg.org/wiki/Capture/PulseAudio
     if ffmpeg -f pulse -i $1 -c:a libvorbis recording.ogg ; then
         echo
@@ -82,7 +82,7 @@ function audio_record_from {
         echo
     fi
 }
-function audio_encode_vorbis {
+function audio-encode-vorbis {
     local outfile="${2%.*}".ogg
     if ffmpeg -i "$1" -vn -c:a libvorbis "${outfile}" ; then
         echo
@@ -92,27 +92,27 @@ function audio_encode_vorbis {
 }
 
 # Wacom mapping
-function wacom_map {
+function wacom-map {
     for i in $2; do
         xsetwacom --set "$1 $i" MapToOutput "$3"
     done
 }
 
-function wacom_map_intuos {
+function wacom-map-intuos {
     local name="Wacom Intuos S Pen"
     local opts="stylus eraser"
-    wacom_map "$name" "$opts" "$1"
+    wacom-map "$name" "$opts" "$1"
 
     local name_pad="Wacom Intuos S Pad"
     local opts_pad="pad"
-    wacom_map "$name_pad" "$opts_pad" "$1"
+    wacom-map "$name_pad" "$opts_pad" "$1"
 }
-function wacom_map_cintiq {
+function wacom-map-cintiq {
     local name_touch="Wacom Cintiq Pro 16 Touch Finger"
     local opts_touch="touch"
-    wacom_map "$name_touch" "$opts_touch" "$1"
+    wacom-map "$name_touch" "$opts_touch" "$1"
 
     local name="Wacom Cintiq Pro 16 Pen"
     local opts="stylus eraser"
-    wacom_map "$name" "$opts" "$1"
+    wacom-map "$name" "$opts" "$1"
 }
