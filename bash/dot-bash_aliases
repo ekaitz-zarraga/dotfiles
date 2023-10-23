@@ -116,3 +116,8 @@ function wacom-map-cintiq {
     local opts="stylus eraser"
     wacom-map "$name" "$opts" "$1"
 }
+
+# Add screen
+alias screen-add-right='xrandr --auto --output DP-1 --mode 1920x1080 --right-of eDP-1'
+alias screen-add-left='xrandr --auto --output DP-1 --mode 1920x1080 --left-of eDP-1'
+
