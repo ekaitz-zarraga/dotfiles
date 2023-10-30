@@ -73,7 +73,7 @@ function audio-volume-up-db {
     # https://trac.ffmpeg.org/wiki/AudioVolume
     ffmpeg -i "$1" -filter:a "volume=$3dB" "$2"
 }
-alias audio_list_sources="pactl list short sources"
+alias audio-list-sources="pactl list short sources"
 function audio-record-from {
     # https://trac.ffmpeg.org/wiki/Capture/PulseAudio
     if ffmpeg -f pulse -i $1 -c:a libvorbis recording.ogg ; then
