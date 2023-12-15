@@ -39,10 +39,6 @@ Plug 'zaid/vim-rec'
 " Guix
 Plug 'https://gitlab.com/Efraim/guix.vim'
 
-" Zig
-Plug 'ziglang/zig.vim'
-let g:zig_fmt_autosave = 0
-
 " Conjure: lispy things! this is what I wanted to do with combustion!
 Plug 'Olical/conjure'
 let g:conjure#client_on_load = v:false
