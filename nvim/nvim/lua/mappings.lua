@@ -15,3 +15,4 @@ vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
 
 vim.api.nvim_create_user_command('MakeTags', '!ctags -R .', {})
+vim.api.nvim_create_user_command('Sgrep', 'silent grep! <args> | copen 10', {nargs= '+'})
