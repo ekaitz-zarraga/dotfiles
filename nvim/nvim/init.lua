@@ -45,6 +45,14 @@ vim.cmd.highlight("ExtraWhitespace", "ctermbg=red", "guibg=red")
 -- HighLight search
 vim.opt.hlsearch = true
 
+-- Jump to latest position
+vim.api.nvim_create_autocmd({ "BufReadPost" }, {
+    pattern = { "*" },
+    callback = function()
+        vim.api.nvim_exec('silent! normal! g`"', false)
+    end,
+})
+
 -- Whitespace
 local extraWhitespace = vim.api.nvim_create_augroup('whitespace', { clear = false })
 vim.api.nvim_create_autocmd({"WinNew", "TabNew", "BufEnter", "InsertLeave"}, {
