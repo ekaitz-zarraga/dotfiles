@@ -5,7 +5,9 @@ vim.cmd.filetype("off")
 local Plug = vim.fn['plug#']
 vim.fn["plug#begin"]()
     Plug("nvim-treesitter/nvim-treesitter")
-    Plug("kovisoft/paredit")
+    Plug("julienvincent/nvim-paredit") -- Keeps parens balanced
+    Plug("gpanders/nvim-parinfer")     -- Parinfer helps with formatting
+    Plug("dundalek/parpar.nvim")       -- Parinfer and Paredit work together
     Plug("sgur/vim-editorconfig")
     Plug("dracula/vim")
     Plug("othree/html5.vim")
@@ -116,7 +118,7 @@ vim.opt.formatoptions="jcroql"
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "c", "cpp", "lua", "python", "scheme", "javascript",
-    "fennel", "zig" },
+    "fennel", "zig", "clojure" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -150,5 +152,6 @@ if vim.fn.executable("rg") then
     vim.opt.grepformat="%f:%l:%c:%m,%f:%l:%m"
 end
 
--- Mappings
-require("mappings")
+-- Extras
+require'mappings'
+require'parens'
