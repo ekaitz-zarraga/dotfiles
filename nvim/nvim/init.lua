@@ -6,6 +6,7 @@ local Plug = vim.fn['plug#']
 vim.fn["plug#begin"]()
     Plug("nvim-treesitter/nvim-treesitter")
     Plug("julienvincent/nvim-paredit") -- Keeps parens balanced
+    Plug("ekaitz-zarraga/nvim-paredit-scheme") -- Scheme extension
     Plug("gpanders/nvim-parinfer")     -- Parinfer helps with formatting
     Plug("dundalek/parpar.nvim")       -- Parinfer and Paredit work together
     Plug("sgur/vim-editorconfig")
@@ -153,5 +154,5 @@ if vim.fn.executable("rg") then
 end
 
 -- Extras
-require'mappings'
-require'parens'
+require 'mappings'
+require 'parens'

@@ -5,6 +5,9 @@ end
 function trimWhiteSpaceVisual()
     vim.cmd("'<,'>s/\\s\\+$//")
 end
+
+vim.g.localleader=","
+
 vim.keymap.set('n', '<F2>', trimWhiteSpace)
 vim.keymap.set('v', '<F2>', trimWhiteSpaceVisual)
 
