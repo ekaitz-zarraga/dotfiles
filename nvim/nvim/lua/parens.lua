@@ -3,15 +3,12 @@ local parpar  = require "parpar"
 local scheme  = require "nvim-paredit-scheme"
 
 paredit.setup({
-    extensions = {
-        scheme = require "nvim-paredit-scheme"
-    },
     -- should plugin use default keybindings? (default = true)
     use_default_keys = true,
     -- sometimes user wants to restrict plugin to certain file types only
     -- defaults to all supported file types including custom lang
     -- extensions (see next section)
-    filetypes = { "scheme", "clojure", "guix", "fennel", "lisp", "guile" },
+    filetypes = { "scheme", "clojure", "fennel"},
 
     -- This controls where the cursor is placed when performing slurp/barf operations
     --
@@ -129,6 +126,7 @@ paredit.setup({
             repeatable = false,
             mode = { "o", "v" },
         },
+        -- Wrap parenthesis
         ["<localleader>w"] = {
             function()
                 -- place cursor and set mode to `insert`
@@ -167,6 +165,51 @@ paredit.setup({
             function()
                 paredit.cursor.place_cursor(
                 paredit.wrap.wrap_enclosing_form_under_cursor("(", ")"),
+                { placement = "inner_end", mode = "insert" }
+                )
+            end,
+            "Wrap form insert tail",
+        },
+
+        -- Wrap quotes
+        ["<localleader>\"w"] = {
+            function()
+                -- place cursor and set mode to `insert`
+                paredit.cursor.place_cursor(
+                -- wrap element under cursor with `( ` and `)`
+                paredit.wrap.wrap_element_under_cursor("\" ", "\""),
+                -- cursor placement opts
+                { placement = "inner_start", mode = "insert" }
+                )
+            end,
+            "Wrap element insert head",
+        },
+
+        ["<localleader>\"W"] = {
+            function()
+                paredit.cursor.place_cursor(
+                paredit.wrap.wrap_element_under_cursor("\"", "\""),
+                { placement = "inner_end", mode = "insert" }
+                )
+            end,
+            "Wrap element insert tail",
+        },
+
+        -- same as above but for enclosing form
+        ["<localleader>\"i"] = {
+            function()
+                paredit.cursor.place_cursor(
+                paredit.wrap.wrap_element_under_cursor("\" ", "\""),
+                { placement = "inner_start", mode = "insert" }
+                )
+            end,
+            "Wrap form insert head",
+        },
+
+        ["<localleader>\"I"] = {
+            function()
+                paredit.cursor.place_cursor(
+                paredit.wrap.wrap_element_under_cursor("\"", "\""),
                 { placement = "inner_end", mode = "insert" }
                 )
             end,
