@@ -1,6 +1,6 @@
 local paredit = require "nvim-paredit"
-local parpar  = require "parpar"
 local scheme  = require "nvim-paredit-scheme"
+local autopairs = require "nvim-autopairs"
 
 paredit.setup({
     -- should plugin use default keybindings? (default = true)
@@ -220,4 +220,8 @@ paredit.setup({
 
 scheme.setup(paredit)
 
-parpar.setup { paredit = paredit }
+autopairs.setup {
+    check_ts = true,
+    enable_check_bracket_line = false
+}
+autopairs.get_rules("'")[1].not_filetypes = { "scheme", "lisp", "clojure"}
