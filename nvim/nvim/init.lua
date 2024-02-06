@@ -37,10 +37,7 @@ vim.cmd.colorscheme("dracula")
 vim.opt.cursorline = true
 vim.cmd.highlight("CursorColumn", "ctermbg=DarkGrey", "guibg=#262626")
 vim.cmd.highlight("CursorLine", "ctermbg=DarkGrey", "guibg=#262626")
-
-vim.opt.colorcolumn = "80"
 vim.cmd.highlight("ColorColumn", "ctermbg=DarkGrey", "guibg=#262626")
-
 vim.cmd.highlight("ExtraWhitespace", "ctermbg=red", "guibg=red")
 
 -- HighLight search
@@ -113,6 +110,14 @@ vim.opt.shiftwidth=4
 -- Formatting
 vim.opt.textwidth=79
 vim.opt.formatoptions="jcroql"
+-- Put colorcolumn after editorconfig is loaded
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+    pattern = { "*" },
+    callback = function()
+        vim.opt.colorcolumn=tostring(vim.o.textwidth+1)
+    end,
+})
+
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
