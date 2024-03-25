@@ -11,11 +11,12 @@ vim.fn["plug#begin"]()
     Plug("dracula/vim")
     Plug("othree/html5.vim")
     Plug("zaid/vim-rec")
-    Plug("https://gitlab.com/Efraim/guix.vim")
-    Plug("Olical/conjure")
-    vim.g["conjure#client_on_load"] = false
-    vim.g["conjure#filetype#scheme"] = "conjure.client.guile.socket"
-    vim.g["conjure#debug"] = true
+    -- Plug("https://gitlab.com/Efraim/guix.vim")
+    -- TODO: reimplement this^^ without overwriting the scheme filetype
+    -- Plug("Olical/conjure")
+    -- vim.g["conjure#client_on_load"] = false
+    -- vim.g["conjure#filetype#scheme"] = "conjure.client.guile.socket"
+    -- vim.g["conjure#debug"] = true
     vim.g.maplocalleader = ","
     -- Zig is installed in nvim
     vim.g.zig_fmt_autosave = 0
