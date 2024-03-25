@@ -45,7 +45,7 @@ vim.opt.hlsearch = true
 
 -- Jump to latest position
 vim.api.nvim_create_autocmd({ "BufReadPost" }, {
-    pattern = { "*" },
+    pattern = { '{*}{.git/COMMIT_EDITMSG}\\@<!' },
     callback = function()
         vim.api.nvim_exec('silent! normal! g`"', false)
     end,
