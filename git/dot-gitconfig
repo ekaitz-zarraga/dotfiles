@@ -1,21 +1,32 @@
 [user]
-	email = ekaitz@elenq.tech
-	name = Ekaitz Zarraga
+    email = ekaitz@elenq.tech
+    name = Ekaitz Zarraga
 [core]
-	editor = nvim
+    editor = nvim
 [color]
-	ui = auto
+    ui = auto
 [diff]
-	tool = nvimdiff
+    tool = nvimdiff
 [merge]
-	tool = nvimdiff
-	conflictStyle = diff3
+    tool = nvimdiff
+    conflictStyle = diff3
 [push]
-	default = simple
+    default = simple
 [alias]
-	lg = log --graph --oneline --decorate --all
-	overview = log --graph --oneline --decorate --all --simplify-by-decoration
+    lg = log --graph --oneline --decorate
+    lga = log --graph --oneline --decorate --all
+    overview = log --graph --oneline --decorate --all --simplify-by-decoration
 [pull]
-	ff = only
+    ff = only
 [init]
-	defaultBranch = master
+    defaultBranch = master
+[branch]
+    sort = -committerdate
+[sendemail]
+    smtpserver = smtp.soverin.net
+    smtpuser = ekaitz@elenq.tech
+    smtpencryption = ssl
+    annotate = true
+    confirm = auto
+[rebase]
+    autosquash = true
