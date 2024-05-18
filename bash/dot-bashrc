@@ -47,6 +47,7 @@ export HISTTIMEFORMAT="[%F %T] "
 # Editors
 export EDITOR=nvim
 export PAGER=less
+export TERMINAL=alacritty
 
 PATH=$PATH:$HOME/.local/bin
 
