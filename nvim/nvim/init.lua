@@ -123,7 +123,7 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "c", "cpp", "lua", "python", "scheme", "javascript",
-    "fennel", "zig", "clojure" },
+    "fennel", "zig", "clojure", "vimdoc", "vim", "bash" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -159,4 +159,5 @@ end
 
 -- Extras
 require 'mappings'
+require 'highlight'
 require 'parens'
