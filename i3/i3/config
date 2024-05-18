@@ -205,5 +205,9 @@ bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipbo
 bindsym $mod+Shift+t exec xinput --enable  12
 bindsym $mod+t       exec xinput --disable  12
 
+# Move to output
+bindsym $mod+n move workspace to output right
+bindsym $mod+p move workspace to output right
+
 # Start user-level service cotrol with shepherd
 exec --no-startup-id shepherd
