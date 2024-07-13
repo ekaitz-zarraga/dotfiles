@@ -202,8 +202,8 @@ bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipbo
 # TODO:
 #bindsym XF86TouchpadToggle       exec xinput --disable 12
 #bindsym XF86TouchpadToggle       exec xinput --enable  12
-bindsym $mod+Shift+t exec xinput --enable  12
-bindsym $mod+t       exec xinput --disable  12
+bindsym $mod+Shift+t exec xinput enable   'MSFT0001:01 06CB:CD64 Touchpad'
+bindsym $mod+t       exec xinput disable  'MSFT0001:01 06CB:CD64 Touchpad'
 
 # Move to output
 bindsym $mod+n move workspace to output right
