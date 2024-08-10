@@ -8,6 +8,7 @@ vim.fn["plug#begin"]()
     Plug("julienvincent/nvim-paredit") -- Some paredit commands
     Plug("ekaitz-zarraga/nvim-paredit-scheme") -- Scheme extension
     Plug("windwp/nvim-autopairs") -- Autobalance parens
+    Plug('luizribeiro/vim-cooklang')
     Plug("dracula/vim")
     Plug("othree/html5.vim")
     Plug("zaid/vim-rec")
