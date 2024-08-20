@@ -1,0 +1,5 @@
+# vim: ft=cfg
+[global]
+
+dmenu = dmenu -p dunst
+browser = xdg-open

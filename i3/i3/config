@@ -209,5 +209,13 @@ bindsym $mod+t       exec xinput disable  'MSFT0001:01 06CB:CD64 Touchpad'
 bindsym $mod+n move workspace to output right
 bindsym $mod+p move workspace to output right
 
+# dunst
+# 47 is ;(en) ñ(en)
+bindcode $mod+47            exec dunstctl close
+bindcode $mod+Shift+47      exec dunstctl close-all
+bindsym  $mod+period       exec dunstctl history-pop
+bindsym  $mod+comma        exec dunstctl context
+
+
 # Start user-level service cotrol with shepherd
 exec --no-startup-id shepherd

@@ -24,6 +24,8 @@ stow -Rt $XDG_CONFIG_HOME i3
 stow -Rt $XDG_CONFIG_HOME i3status
 # Plasma session environment variables
 #stow -Rt "${XDG_CONFIG_HOME:=$HOME/.config}/plasma-workspace/env" plasma-env
+# dunst
+stow -Rt $XDG_CONFIG_HOME dunst
 
 # Shepherd user services
 stow -Rt $XDG_CONFIG_HOME shepherd
