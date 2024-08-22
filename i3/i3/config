@@ -220,3 +220,6 @@ bindsym  $mod+comma        exec dunstctl context
 
 # Start user-level service cotrol with shepherd
 exec --no-startup-id shepherd
+
+# Start dunst
+exec --no-startup-id dunst

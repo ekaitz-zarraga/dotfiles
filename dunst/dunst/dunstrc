@@ -1,5 +1,5 @@
 # vim: ft=cfg
 [global]
 
-dmenu = dmenu -p dunst
+dmenu = /usr/bin/env dmenu -p dunst
 browser = xdg-open
