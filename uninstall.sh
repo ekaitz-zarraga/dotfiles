@@ -28,3 +28,6 @@ stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} i3
 stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} i3status
 # Plasma session environment variables
 #stow -Rt "${XDG_CONFIG_HOME:=$HOME/.config}/plasma-workspace/env" plasma-env
+
+# newsboat
+stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} newsboat

@@ -32,3 +32,6 @@ stow -Rt $XDG_CONFIG_HOME shepherd
 
 # Redshift
 stow -Rt $XDG_CONFIG_HOME redshift
+
+# Newsboat
+stow -Rt $XDG_CONFIG_HOME newsboat

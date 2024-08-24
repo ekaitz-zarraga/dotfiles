@@ -1,0 +1,11 @@
+auto-reload yes
+refresh-on-startup yes
+ssl-verifyhost false
+ssl-verifypeer false
+browser "icecat %u 2>/dev/null >&2 &"
+
+reload-threads 50
+macro y set browser "mpv %u 2>/dev/null >&2 &" ; open-in-browser ; set browser "icecat %u 2>/dev/null >&2 &"
+
+player mpv
+download-path ~/Downloads
