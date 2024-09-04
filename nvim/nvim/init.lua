@@ -42,6 +42,10 @@ vim.cmd.highlight("CursorLine", "ctermbg=DarkGrey", "guibg=#262626")
 vim.cmd.highlight("ColorColumn", "ctermbg=DarkGrey", "guibg=#262626")
 vim.cmd.highlight("ExtraWhitespace", "ctermbg=red", "guibg=red")
 
+-- Spell
+-- Only mark the underline, by default it also writes the text in red
+vim.cmd.highlight("SpellBad", "cterm=underline", "gui=undercurl")
+
 -- HighLight search
 vim.opt.hlsearch = true
 
