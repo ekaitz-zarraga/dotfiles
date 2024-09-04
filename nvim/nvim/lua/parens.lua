@@ -224,5 +224,6 @@ autopairs.setup {
     check_ts = true,
     enable_check_bracket_line = false
 }
-autopairs.get_rules("'")[1].not_filetypes = { "scheme", "lisp", "clojure", "markdown", "text" }
+autopairs.get_rules("'")[1].not_filetypes = { "scheme", "lisp", "clojure",
+    "markdown", "text", "tex", "texinfo" }
 autopairs.get_rules("`")[1].not_filetypes = { "scheme", "lisp", "clojure" }
