@@ -44,7 +44,10 @@ vim.cmd.highlight("ExtraWhitespace", "ctermbg=red", "guibg=red")
 
 -- Spell
 -- Only mark the underline, by default it also writes the text in red
-vim.cmd.highlight("SpellBad", "cterm=underline", "gui=undercurl")
+vim.cmd.highlight("SpellBad",   "cterm=underline", "gui=undercurl")
+vim.cmd.highlight("SpellCap",   "cterm=underline", "gui=undercurl")
+vim.cmd.highlight("SpellRare",  "cterm=underline", "gui=undercurl")
+vim.cmd.highlight("SpellLocal", "cterm=underline", "gui=undercurl")
 
 -- HighLight search
 vim.opt.hlsearch = true
