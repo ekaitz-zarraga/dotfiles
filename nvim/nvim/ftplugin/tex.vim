@@ -2,5 +2,5 @@ setlocal tabstop=2 softtabstop=0 expandtab shiftwidth=2
 setlocal autoindent
 
 setlocal formatoptions+=t
-set spell
-set spelllang=en
+setlocal spell
+setlocal spelllang=en
