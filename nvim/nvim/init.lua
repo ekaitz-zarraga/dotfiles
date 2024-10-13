@@ -6,7 +6,6 @@ local Plug = vim.fn['plug#']
 vim.fn["plug#begin"]()
     Plug("nvim-treesitter/nvim-treesitter")
     Plug("julienvincent/nvim-paredit") -- Some paredit commands
-    Plug("ekaitz-zarraga/nvim-paredit-scheme") -- Scheme extension
     Plug("windwp/nvim-autopairs") -- Autobalance parens
     Plug('luizribeiro/vim-cooklang')
     Plug("dracula/vim")
@@ -130,7 +129,7 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "c", "cpp", "lua", "python", "scheme", "javascript",
+  ensure_installed = { "c", "cpp", "python", "scheme", "javascript",
     "fennel", "zig", "clojure", "vimdoc", "vim", "bash" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)

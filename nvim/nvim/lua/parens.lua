@@ -1,5 +1,4 @@
 local paredit = require "nvim-paredit"
-local scheme  = require "nvim-paredit-scheme"
 local autopairs = require "nvim-autopairs"
 
 paredit.setup({
@@ -217,8 +216,6 @@ paredit.setup({
         }
     }
 })
-
-scheme.setup(paredit)
 
 autopairs.setup {
     check_ts = true,
