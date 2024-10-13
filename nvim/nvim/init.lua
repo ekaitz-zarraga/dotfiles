@@ -6,7 +6,8 @@ local Plug = vim.fn['plug#']
 vim.fn["plug#begin"]()
     Plug("nvim-treesitter/nvim-treesitter")
     Plug("julienvincent/nvim-paredit") -- Some paredit commands
-    Plug("ekaitz-zarraga/nvim-paredit-scheme") -- Scheme extension
+    -- Plug("ekaitz-zarraga/nvim-paredit-scheme") -- Scheme extension NOT
+    -- NEEDED ANYMORE
     Plug("windwp/nvim-autopairs") -- Autobalance parens
     Plug('luizribeiro/vim-cooklang')
     Plug("dracula/vim")
