@@ -35,3 +35,6 @@ stow -Rt $XDG_CONFIG_HOME redshift
 
 # Newsboat
 stow -Rt $XDG_CONFIG_HOME newsboat
+
+# Sioyek
+stow -Rt $XDG_CONFIG_HOME sioyek

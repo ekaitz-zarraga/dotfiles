@@ -32,3 +32,6 @@ stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} dunst
 
 # newsboat
 stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} newsboat
+
+# sioyek
+stow -Dt ${XDG_CONFIG_HOME:=$HOME/.config} sioyek
